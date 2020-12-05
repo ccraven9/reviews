@@ -1,3 +1,4 @@
+import { ArticleBuilderFormComponent } from './components/article-builder-form/article-builder-form.component';
 import { WebContainerComponent } from './web-container/web-container.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -8,10 +9,11 @@ import {MatCardModule} from '@angular/material/card';
 
 const ROUTES: Routes = [
   {path: 'home', component: HomeComponent},
-  { path: '',   redirectTo: '/home', pathMatch: 'full' }];
+  { path: '',   redirectTo: '/home', pathMatch: 'full' },
+  {path: 'article-builder', component: ArticleBuilderFormComponent}];
 
 @NgModule({
-  declarations: [HomeComponent, WebContainerComponent, HeaderComponent],
+  declarations: [HomeComponent, WebContainerComponent, HeaderComponent, ArticleBuilderFormComponent],
   imports: [
     CommonModule,
     RouterModule.forRoot(ROUTES),
