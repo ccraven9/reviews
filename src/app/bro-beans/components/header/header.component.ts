@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+
+  reviewsClicked() {
+    console.log('Reviews Clicked!');
+    this.router.navigateByUrl('/article-builder');
+  }
+
+  podcastClicked() {
+    console.log('Podcast Clicked!');
+    this.router.navigateByUrl('/podcast');
+  }
+
+  crewClicked() {
+    console.log('Crew Clicked!');
+    this.router.navigateByUrl('/the-crew');
+  }
+
+  logoClicked() {
+    console.log('Crew Clicked!');
+    this.router.navigateByUrl('/home');
   }
 
 }
